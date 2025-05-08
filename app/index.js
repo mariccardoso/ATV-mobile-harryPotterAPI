@@ -9,16 +9,16 @@ import { View, FlatList, SafeAreaView, StyleSheet, Text } from "react-native";
 // Importa a biblioteca axios para buscar dados da internet
 import axios from "axios";
 
-// Importa o componente que mostra o card com dados do filme
-import FilmCard from "../components/FilmCard";
+// Importa o componente que mostra o card com dados do personagem
+import CharacterCard from "../components/CharacterCard";
 
 // Importa o componente que mostra o "esqueleto" animado de carregamento
 import SkeletonCard from "../components/SkeletonCard";
 
 // Função principal que representa a tela inicial
 export default function Home() {
-  // Cria um estado chamado films para guardar a lista de filmes
-  const [films, setFilms] = useState([]);
+  // Cria um estado chamado characters para guardar a lista de personagems
+  const [characters, setCharacters] = useState([]);
 
   // Cria um estado chamado loading para saber se os dados ainda estão carregando
   const [loading, setLoading] = useState(true);
@@ -29,7 +29,7 @@ export default function Home() {
     setTimeout(() => {
       // Faz uma requisição GET na API do Studio Ghibli
       axios.get("https://hp-api.onrender.com/api/characters")
-        .then((res) => setFilms(res.data)) // Se der certo, guarda os dados no estado "films"
+        .then((res) => setCharacters(res.data)) // Se der certo, guarda os dados no estado "characters"
         .catch((err) => console.error(err)) // Se der erro, mostra no console
         .finally(() => setLoading(false)); // Quando terminar, muda "loading" para false
     }, 5000); // Tempo de espera: 5 segundos
@@ -51,11 +51,11 @@ export default function Home() {
           contentContainerStyle={styles.list} // Aplica o estilo na lista
         />
       ) : (
-        // Se já carregou os dados, mostra os filmes reais
+        // Se já carregou os dados, mostra os personagems reais
         <FlatList
-          data={films} // Lista vinda da API
-          keyExtractor={(item) => item.id} // Usa o ID do filme como chave
-          renderItem={({ item }) => <FilmCard film={item} />} // Renderiza um FilmCard passando o filme
+          data={characters} // Lista vinda da API
+          keyExtractor={(item) => item.id} // Usa o ID do personagem como chave
+          renderItem={({ item }) => <CharacterCard film={item} />} // Renderiza um CharacterCard passando o personagem
           contentContainerStyle={styles.list} // Aplica o estilo na lista
         />
       )}

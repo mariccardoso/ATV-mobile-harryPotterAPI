@@ -29,7 +29,7 @@ export default function SkeletonCard() {
       }}
       style={styles.card} // Aplica o estilo de cartão
     >
-      {/* Simula a imagem do filme com uma caixa azul clara */}
+      {/* Simula a imagem do personagem com uma caixa azul clara */}
       <View style={styles.image} />
 
       {/* Simula uma linha de texto com um bloco claro */}

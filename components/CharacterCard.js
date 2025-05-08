@@ -4,14 +4,14 @@ import { View, Text, StyleSheet, Image, Dimensions } from "react-native";
 // Pegamos a largura da tela para ajustar a altura da imagem proporcionalmente
 const screenWidth = Dimensions.get("window").width;
 
-// O componente recebe um filme (film) como propriedade
-export default function FilmCard({ film }) {
+// O componente recebe um personagem (film) como propriedade
+export default function CharacterCard({ film }) {
   return (
     <View style={styles.card}>
-      {/* Imagem do filme (pôster vertical) */}
+      {/* Imagem do personagem (pôster vertical) */}
       <Image source={{ uri: film.image }} style={styles.image} />
 
-      {/* Bloco com as informações do filme */}
+      {/* Bloco com as informações do personagem */}
       <View style={styles.info}>
         {/*  Nome do personagem */}
         <Text style={styles.name}>{film.name ?? "Título não disponível"}</Text>
