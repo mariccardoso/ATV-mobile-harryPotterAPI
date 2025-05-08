@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "scheme": "acme",
+    "plugins": [
+      "expo-router"
+    ],
+    "name": "ATV-mobile-studio-ghibli",
+    "slug": "ATV-mobile-studio-ghibli"
+  }
+}
