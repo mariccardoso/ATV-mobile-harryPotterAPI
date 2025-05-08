@@ -2,7 +2,7 @@
 
 ![banner](./assets/banner.png)
 
-## Descrição do Projeto
+
 ## 🪄 Descrição do Projeto
 Este projeto é um aplicativo que consome a API de Harry Potter para exibir informações sobre personagens, feitiços, casas e outros elementos do universo mágico. Ele foi desenvolvido com o objetivo de praticar o consumo de APIs e a criação de interfaces interativas.
 
